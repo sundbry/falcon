@@ -1,6 +1,6 @@
 {
   "name": "falcon-kube",
-  "version": "0.4.0",
+  "version": "0.4.1-alpha",
   "description": "Falcon is a Kubernetes package manager developed in ClojureScript.",
   "main": "index.js",
   "bin": {
@@ -12,8 +12,12 @@
   "dependencies": {
     "yamljs": "0.2.10"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "shadow-cljs": "2.8.67"
+  },
   "scripts": {
+    "build": "shadow-cljs release app",
+    "watch": "shadow-cljs watch app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
