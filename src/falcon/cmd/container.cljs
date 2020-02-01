@@ -50,7 +50,7 @@
                       (assoc :working-dir dockerpath))
                     [(str "-t=" container-id)
                      (if (some? dockerpath)
-                       dockerpath
+                       "."
                        (species-path container))])
                   (shell/check-status)))
           (<! (-> (docker/tag
